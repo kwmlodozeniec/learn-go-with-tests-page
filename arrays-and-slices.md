@@ -5,7 +5,7 @@
 Arrays allow you to store multiple elements of the same type in a variable in
 a particular order.
 
-When you have an array, it is very common to have to iterate over them. So let's
+When you have arrays, it is very common to have to iterate over them. So let's
 use [our new-found knowledge of `for`](iteration.md) to make a `Sum` function. `Sum` will
 take an array of numbers and return the total.
 
@@ -365,7 +365,7 @@ func SumAll(numbersToSum ...[]int) []int {
 Lots of new things to learn!
 
 There's a new way to create a slice. `make` allows you to create a slice with
-a starting capacity of the `len` of the `numbersToSum` we need to work through.The length of a slice is the number of elements it holds `len(mySlice)`, while the capacity is the number of elements it can hold in the underlying array `cap(mySlice)`, e.g., `make([]int, 0, 5)` creates a slice with length 0 and capacity 5.
+a starting capacity of the `len` of the `numbersToSum` we need to work through. The length of a slice is the number of elements it holds `len(mySlice)`, while the capacity is the number of elements it can hold in the underlying array `cap(mySlice)`, e.g., `make([]int, 0, 5)` creates a slice with length 0 and capacity 5.
 
 You can index slices like arrays with `mySlice[N]` to get the value out or
 assign it a new value with `=`

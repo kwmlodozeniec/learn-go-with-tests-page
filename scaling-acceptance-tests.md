@@ -988,7 +988,7 @@ COPY . .
 
 RUN go build -o svr cmd/grpcserver/*.go
 
-EXPOSE 8080
+EXPOSE 50051
 CMD [ "./svr" ]
 ```
 
