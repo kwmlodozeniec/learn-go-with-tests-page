@@ -212,7 +212,7 @@ We are caught by the original test `CheckWebsites`, it's now returning an
 empty map. What went wrong?
 
 None of the goroutines that our `for` loop started had enough time to add
-their result to the `results` map; the `WebsiteChecker` function is too fast for
+their result to the `results` map; the `CheckWebsites` function is too fast for
 them, and it returns the still empty map.
 
 To fix this we can just wait while all the goroutines do their work, and then
@@ -330,7 +330,7 @@ On top of that, we can see the line of code where the write is happening:
 
 `/Users/gypsydave5/go/src/github.com/gypsydave5/learn-go-with-tests/concurrency/v3/websiteChecker.go:12`
 
-and the line of code where goroutines 7 an 8 are started:
+and the line of code where goroutines 7 and 8 are started:
 
 `/Users/gypsydave5/go/src/github.com/gypsydave5/learn-go-with-tests/concurrency/v3/websiteChecker.go:11`
 
